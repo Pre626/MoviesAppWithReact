@@ -1,0 +1,110 @@
+.upcoming-page {
+      background-color: #121212;
+      color: #ffffff;
+      padding: 20px;
+      min-height: 100vh;
+}
+
+h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+      from {
+            opacity: 0;
+      }
+
+      to {
+            opacity: 1;
+      }
+}
+
+.movies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+}
+
+.movie-card {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+}
+
+.movie-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster {
+      width: 100%;
+      height: auto;
+}
+
+.movie-details {
+      padding: 15px;
+      text-align: center;
+}
+
+.movie-details h3 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+}
+
+.movie-details p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+      color: #b0b0b0;
+}
+
+.loading-spinner {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 20%;
+}
+
+.error-message {
+      text-align: center;
+      margin-top: 20%;
+}
+
+.pagination-controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+}
+
+.pagination-controls button {
+      background-color: #454545;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+}
+
+.pagination-controls button:hover {
+      background-color:#454545;
+}
+
+@media (max-width: 768px) {
+      .upcoming-page {
+            padding: 10px;
+      }
+
+      .movies-grid {
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+
+      h1 {
+            font-size: 2rem;
+      }
+}
